@@ -1,25 +1,214 @@
+:root {
+  --brand-green: #68aa2b;
+  --brand-green-rgb: 104, 170, 43;
+  --brand-green-hover: #5a9425;
+  --brand-green-active: #4e8220;
+  --brand-ink: #111111;
+  --brand-link: #34580f;
+  --brand-link-hover: #243e0a;
+  --brand-muted: #5c5c5c;
+  --brand-line: #e4e4e0;
+  --brand-canvas: #f4f5f2;
+  --brand-surface: #ffffff;
+  --brand-green-soft: #eef6df;
+  --brand-green-soft-border: #c9e3a4;
+
+  --bs-primary: var(--brand-green);
+  --bs-primary-rgb: 104, 170, 43;
+  --bs-primary-text-emphasis: var(--brand-link-hover);
+  --bs-primary-bg-subtle: var(--brand-green-soft);
+  --bs-primary-border-subtle: var(--brand-green-soft-border);
+  --bs-dark: var(--brand-ink);
+  --bs-dark-rgb: 17, 17, 17;
+  --bs-body-color: var(--brand-ink);
+  --bs-body-bg: var(--brand-canvas);
+  --bs-emphasis-color: #000000;
+  --bs-secondary-color: var(--brand-muted);
+  --bs-secondary-bg: #efefec;
+  --bs-tertiary-bg: #f7f7f5;
+  --bs-border-color: var(--brand-line);
+  --bs-link-color: var(--brand-link);
+  --bs-link-hover-color: var(--brand-link-hover);
+  --bs-link-color-rgb: 52, 88, 15;
+  --bs-link-hover-color-rgb: 36, 62, 10;
+  --bs-focus-ring-color: rgba(104, 170, 43, 0.35);
+}
+
 body {
-  min-height: 100vh;
-  background-color: #f4f6f8;
-  color: #1c1f23;
+  color: var(--brand-ink);
+  background-color: var(--brand-canvas);
 }
 
-.home-shell {
-  min-height: 100vh;
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 28px;
+  max-width: min(210px, 62vw);
 }
 
-.home-mark {
-  width: 11rem;
-  height: auto;
+.navbar {
+  --bs-navbar-color: var(--brand-ink);
+  --bs-navbar-hover-color: var(--brand-link);
+  --bs-navbar-active-color: var(--brand-link-hover);
+  --bs-navbar-brand-color: var(--brand-ink);
+  --bs-navbar-brand-hover-color: var(--brand-ink);
+  --bs-navbar-toggler-border-color: rgba(17, 17, 17, 0.15);
+  background-color: var(--brand-surface);
+  border-bottom: 2px solid var(--brand-green) !important;
 }
 
-.starter-card {
-  color: inherit;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(104, 170, 43, 0.35);
 }
 
-.starter-card:hover {
-  color: inherit;
-  border-color: #0d6efd;
-  box-shadow: 0 0.35rem 1rem rgba(13, 110, 253, 0.08);
+.card {
+  --bs-card-bg: var(--brand-surface);
+  --bs-card-color: var(--brand-ink);
+  --bs-card-border-color: var(--brand-line);
+  --bs-card-cap-bg: var(--brand-surface);
+}
+
+.btn-primary {
+  --bs-btn-color: var(--brand-ink);
+  --bs-btn-bg: var(--brand-green);
+  --bs-btn-border-color: var(--brand-green);
+  --bs-btn-hover-color: var(--brand-ink);
+  --bs-btn-hover-bg: var(--brand-green-hover);
+  --bs-btn-hover-border-color: var(--brand-green-hover);
+  --bs-btn-focus-shadow-rgb: 104, 170, 43;
+  --bs-btn-active-color: var(--brand-ink);
+  --bs-btn-active-bg: var(--brand-green-active);
+  --bs-btn-active-border-color: var(--brand-green-active);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--brand-ink);
+  --bs-btn-disabled-bg: var(--brand-green);
+  --bs-btn-disabled-border-color: var(--brand-green);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--brand-link);
+  --bs-btn-border-color: var(--brand-green);
+  --bs-btn-hover-color: var(--brand-ink);
+  --bs-btn-hover-bg: var(--brand-green);
+  --bs-btn-hover-border-color: var(--brand-green);
+  --bs-btn-focus-shadow-rgb: 104, 170, 43;
+  --bs-btn-active-color: var(--brand-ink);
+  --bs-btn-active-bg: var(--brand-green-hover);
+  --bs-btn-active-border-color: var(--brand-green-hover);
+  --bs-btn-disabled-color: var(--brand-green);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--brand-green);
+}
+
+.btn-link {
+  --bs-btn-color: var(--brand-link);
+  --bs-btn-hover-color: var(--brand-link-hover);
+  --bs-btn-active-color: var(--brand-link-hover);
+}
+
+a:hover {
+  color: var(--brand-link-hover);
+}
+
+.form-control,
+.form-select {
+  color: var(--brand-ink);
+  background-color: var(--brand-surface);
+  border-color: #d5d5d0;
+}
+
+.form-control::placeholder {
+  color: #737373;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: var(--brand-green);
+  box-shadow: 0 0 0 0.25rem rgba(104, 170, 43, 0.35);
+}
+
+.form-check-input:checked {
+  background-color: var(--brand-green);
+  border-color: var(--brand-green-hover);
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23111111' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+
+.form-check-input:checked[type="radio"] {
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23111111'/%3e%3c/svg%3e");
+}
+
+.form-switch .form-check-input:checked {
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23111111'/%3e%3c/svg%3e");
+}
+
+.alert-primary {
+  --bs-alert-color: var(--brand-link-hover);
+  --bs-alert-bg: var(--brand-green-soft);
+  --bs-alert-border-color: var(--brand-green-soft-border);
+  --bs-alert-link-color: var(--brand-link-hover);
+}
+
+.text-bg-primary,
+.badge.bg-primary {
+  color: var(--brand-ink) !important;
+}
+
+.nav-pills {
+  --bs-nav-pills-link-active-color: var(--brand-ink);
+  --bs-nav-pills-link-active-bg: var(--brand-green);
+}
+
+.pagination {
+  --bs-pagination-color: var(--brand-link);
+  --bs-pagination-hover-color: var(--brand-link-hover);
+  --bs-pagination-focus-color: var(--brand-link-hover);
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(104, 170, 43, 0.35);
+  --bs-pagination-active-color: var(--brand-ink);
+  --bs-pagination-active-bg: var(--brand-green);
+  --bs-pagination-active-border-color: var(--brand-green);
+}
+
+.list-group {
+  --bs-list-group-active-color: var(--brand-ink);
+  --bs-list-group-active-bg: var(--brand-green);
+  --bs-list-group-active-border-color: var(--brand-green);
+}
+
+.progress {
+  --bs-progress-bar-bg: var(--brand-green);
+}
+
+.dropdown-menu {
+  --bs-dropdown-link-active-color: var(--brand-ink);
+  --bs-dropdown-link-active-bg: var(--brand-green);
+}
+
+.site-footer {
+  background-color: var(--brand-surface) !important;
+  border-top-color: var(--brand-line) !important;
+  color: var(--brand-muted);
+}
+
+.site-footer .nav-link {
+  color: var(--brand-link);
+}
+
+.site-footer .nav-link:hover,
+.site-footer .nav-link:focus {
+  color: var(--brand-link-hover);
+}
+
+@media (min-width: 576px) {
+  .brand-logo {
+    height: 34px;
+    max-width: 240px;
+  }
+}
+
+@media (min-width: 992px) {
+  .brand-logo {
+    height: 40px;
+    max-width: none;
+  }
 }
