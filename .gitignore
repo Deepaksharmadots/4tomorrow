@@ -1,3 +1,46 @@
 //temp files
 *.tmp
 *.temp
+
+# Catalyst
+.build/
+catalyst-debug.log
+.cursor/*
+
+# AppSail production build output
+/build
+
+# Environment files
+.env
+.env.*
+
+#catalyst agents 
+.agents/
+.agents/*
+skills-lock.json 
+
+
+# Client (Next.js)
+/client/node_modules
+/client/.next
+/client/dist
+/client/build
+/client/.env
+/client/.env.*
+/client/package-lock.json
+/client/project-client-existing-loan-calculator
+/client/deepvue-testapi
+
+# Frontend function
+/functions/frontend/node_modules
+/functions/frontend/dist
+/functions/frontend/build
+/functions/frontend/.env
+/functions/frontend/catalyst-debug.log
+/functions/frontend/package-lock.json
+
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+*.log
