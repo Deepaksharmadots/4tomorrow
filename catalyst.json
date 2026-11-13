@@ -1,0 +1,15 @@
+{
+  "functions": {
+    "targets": [
+      "frontend"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "slate": [
+    {
+      "name": "client",
+      "source": "D:\\Zoho\\4tomorrow\\4tomorrow-web\\client"
+    }
+  ]
+}
