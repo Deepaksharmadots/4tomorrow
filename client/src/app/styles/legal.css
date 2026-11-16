@@ -1,0 +1,54 @@
+.legal-page {
+  width: 100%;
+  padding: 1.5rem 1rem 2.5rem;
+}
+
+.legal-document {
+  width: 100%;
+  max-width: 42rem;
+  margin-inline: auto;
+  overflow-wrap: break-word;
+}
+
+.legal-document h1 {
+  margin: 0 0 1.75rem;
+  color: var(--brand-ink);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.legal-document h2 {
+  margin: 2rem 0 0.75rem;
+  color: var(--brand-ink);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.legal-document p {
+  margin: 0 0 0.875rem;
+  color: var(--brand-ink);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.legal-document section p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .legal-page {
+    padding: 2rem 1.5rem 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .legal-page {
+    padding: 2.75rem 2rem 3.5rem;
+  }
+
+  .legal-document h1 {
+    font-size: 2rem;
+  }
+}
