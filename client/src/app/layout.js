@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/globals.css";
 import "./styles/signup.css";
+import "./styles/legal.css";
 import "./styles/responsive.css";
 import BootstrapClient from "./bootstrap-client";
 import Header from "../components/Header";
