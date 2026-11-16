@@ -57,8 +57,159 @@ body {
   border-bottom: 2px solid var(--brand-green) !important;
 }
 
+.navbar-toggler {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border-color: var(--brand-line);
+}
+
 .navbar-toggler:focus {
   box-shadow: 0 0 0 0.25rem rgba(104, 170, 43, 0.35);
+}
+
+.menu-icon {
+  position: relative;
+  display: block;
+  width: 1.125rem;
+  height: 0.875rem;
+}
+
+.menu-icon span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--brand-ink);
+  border-radius: 1px;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.menu-icon span:nth-child(1) {
+  top: 0;
+}
+
+.menu-icon span:nth-child(2) {
+  top: 6px;
+}
+
+.menu-icon span:nth-child(3) {
+  top: 12px;
+}
+
+.navbar-toggler.is-open .menu-icon span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.navbar-toggler.is-open .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler.is-open .menu-icon span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.nav-login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  padding: 0.35rem 0.95rem;
+  border: 1px solid var(--brand-green);
+  border-radius: 0.5rem;
+  color: var(--brand-link);
+  background: var(--brand-surface);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.nav-login:hover {
+  color: var(--brand-ink);
+  background: var(--brand-green);
+  border-color: var(--brand-green);
+}
+
+.nav-login:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(104, 170, 43, 0.35);
+}
+
+.site-header-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  min-width: 0;
+}
+
+.site-header-bar .navbar-brand {
+  min-width: 0;
+  margin-right: auto;
+}
+
+.site-header-bar .navbar-toggler {
+  flex-shrink: 0;
+  margin-left: 0.75rem;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .site-header .navbar > .container {
+    align-items: stretch;
+  }
+
+  .site-header-bar {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 100%;
+    background: var(--brand-surface);
+  }
+
+  .site-nav {
+    display: none;
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .site-nav.is-open {
+    display: block;
+  }
+
+  .nav-login {
+    width: 100%;
+    min-height: 2.75rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-header-bar {
+    width: auto;
+  }
+
+  .site-header-bar .navbar-brand {
+    margin-right: 0;
+  }
+
+  .site-nav {
+    margin-left: auto;
+  }
 }
 
 .card {

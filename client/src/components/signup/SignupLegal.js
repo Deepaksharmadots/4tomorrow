@@ -6,7 +6,7 @@ export default function SignupLegal() {
         <a href="/privacy-policy">Privacy Policy</a>.
       </p>
       <p className="signup-signin">
-        Already have an account? <a href="/login">Sign in</a>
+        Already have an account? <a href="/login">Sign in ffff</a>
       </p>
     </div>
   );
