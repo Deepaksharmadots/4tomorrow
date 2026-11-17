@@ -5,7 +5,9 @@ import VerificationActions from "./VerificationActions";
 
 const PLACEHOLDER_EMAIL = "harry@meridianbp.com.au";
 
-export default function SignupVerification() {
+export default function SignupVerification({ email = "" }) {
+  const shownEmail = email || PLACEHOLDER_EMAIL;
+
   return (
     <section className="signup-page">
       <div className="signup-card">
@@ -15,7 +17,7 @@ export default function SignupVerification() {
           Check your email
         </h1>
         <p className="signup-lead">
-          We sent a 6-digit code to <strong>{PLACEHOLDER_EMAIL}</strong>
+          We sent a 6-digit code to <strong>{shownEmail}</strong>
         </p>
         <VerificationActions />
         <p className="signup-resend">

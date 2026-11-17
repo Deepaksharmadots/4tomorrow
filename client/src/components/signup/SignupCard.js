@@ -21,7 +21,7 @@ export default function SignupCard() {
         <div className="signup-divider" role="separator">
           <span>OR</span>
         </div>
-        <EmailSignupForm />
+        <EmailSignupForm continueHref="/signup/verify" />
         <SignupLegal />
       </div>
     </section>

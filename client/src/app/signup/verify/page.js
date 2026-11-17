@@ -5,6 +5,6 @@ export const metadata = {
   description: "Enter the 6-digit code sent to your work email.",
 };
 
-export default function VerifyEmailPage() {
-  return <SignupVerification />;
+export default function VerifyEmailPage({ searchParams }) {
+  return <SignupVerification email={searchParams.email || ""} />;
 }

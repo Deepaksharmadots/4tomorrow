@@ -297,11 +297,14 @@
   color: #fff;
   background: var(--brand-green);
   border-color: var(--brand-green);
+  text-decoration: none;
 }
 
 .signup-verify:not(:disabled):hover {
+  color: #fff;
   background: var(--brand-green-hover);
   border-color: var(--brand-green-hover);
+  text-decoration: none;
 }
 
 .signup-verify:not(:disabled):focus-visible {

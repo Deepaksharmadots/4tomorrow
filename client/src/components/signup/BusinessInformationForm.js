@@ -1,5 +1,7 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import { DEMO_SIGNUP_ENABLED } from "../../lib/demo-signup";
 import AuthorizationCheckbox from "./AuthorizationCheckbox";
 import FormField from "./FormField";
 
@@ -21,8 +23,12 @@ const CURRENCIES = [
 ];
 
 export default function BusinessInformationForm() {
+  const router = useRouter();
+
   function handleSubmit(event) {
     event.preventDefault();
+    if (!DEMO_SIGNUP_ENABLED) return;
+    router.push("/signup/complete");
   }
 
   return (
